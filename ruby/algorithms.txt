@@ -1,1 +1,15 @@
 Elevator Algorithm
+- Press elevator call button to go down
+- Until the elevator doors open:
+	- Stare at doors 
+- If doors open:
+	- Find shortest path into elevator
+	- Turn towards floor buttons
+	- Press button with M (main floor)
+	- Until doors close
+		- Wait
+- Until doors open and M is alluminated above the elevator's door
+	- Wait
+- If M is alluminated above the elevator's door
+	- Wait for doors to open
+	- Find shortest path out of elevator
