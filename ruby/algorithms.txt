@@ -1,4 +1,4 @@
-Elevator Algorithm
+Robot Riding an Elevator
 - Press elevator call button to go down
 - Until the elevator doors open:
 	- Stare at doors 
@@ -13,3 +13,26 @@ Elevator Algorithm
 - If M is alluminated above the elevator's door
 	- Wait for doors to open
 	- Find shortest path out of elevator
+
+
+Washing hands after using the restroom
+- Find shortest path to sink
+- Turn on tap
+	- If too hot
+		- Turn handle towards cold until lukewarm
+		- Place hands in water flow
+	- Elseif too cold
+		- Turn handle towards hot until lukewarm
+		- Place hands in 
+	- Else place hands in waterflow
+- Remove hands from waterflow
+- Place hand under soap nossel
+- Until soap on hand:
+	- press on soap pump
+- Until 20 seconds pass:
+	- Rub hands together for 5 seconds
+	- Lace and unlace hands for 5 seconds
+- Until no soap remains on hands:
+	- Place hands under water
+	- Rub hands together
+- Turn off tap
