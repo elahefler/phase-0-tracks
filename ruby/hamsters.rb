@@ -29,15 +29,21 @@ puts "What is hamster's fur color?"
 fur = gets.chomp
 
 puts "How old is hampster?"
-age = gets.strip 
-age = age.to_i  
-	if age == 0
+age = gets.chomp 
+	if age.empty?
 		age = nil
+	else 
+	  age = age.to_i  
 	end 
+
+if age == nil
+  age = "unknown"
+end
+
 
 puts "The hamster's name is #{name}"
 
-puts "#{name} has a volume rating of #{volume}. #{name} has #{fur} fur and is #{age} years old."
+puts "#{name} has a volume rating of #{volume}. #{name} has #{fur} fur and its age is #{age}"
 
 if adoption == "y"
 	puts "#{name} is a good candidate for adoption"
