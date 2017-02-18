@@ -4,56 +4,62 @@
 	# Replace each character with the next alphabetical character (.next)
 	# print new index value 
 
-#index = 0
-
-#puts "Enter a password"
-#password = gets.chomp
-# def encrypt(password)
-# index = 0
-# 	while index < password.length
-# 		password[index] = password[index].next!
-# 		index += 1
-# 		puts password	
-# 	end
-# end
-
-# puts encrypt("abc")
-# puts encrypt("zed")
-
-
+# Encrytion method
 def encrypt(password)
+	# intitalize counter outside of loop
 	index = 0
+	# use index values to loop through each character
 	while index < password.length
+		# replace each letter with the one that follows it alphabetically
+		# account for z being replaced with ab by taking only the first character
 		password[index] = password[index].next!.chars.first
-  #  	password.gsub!('ab', 'a')
+		# avoid infinite loop
 		index += 1
 	end
-	puts password
+	# print encrypted password
+	p password
+end
+
+# Decryption method
+def decrypt (password)
+	# initialize counter outside of loop
+	index = 0
+	# set variables outside of loop
+	decode = "&"
+	reference = "abcdefghijklmnopqrstuvwxyz"
+	# use index values to loop through each character
+	while index < password.length
+		# take each character in order
+		pw = password[index]
+		# get the  index number of the same letter from the reference string
+		ref = reference.index(pw)
+		# subtract one from this index value 
+		ref -= 1
+		# convert the index number back into a character value
+		val = reference[ref]
+		# compile the decrypted characters into a string
+		decode = decode + val
+		# avoid infinite loop
+		index += 1
+	end
+	# remove placeholder value from decrypted string
+	decode.delete! "&"
+	# print decrypted password
+	p decode
 end
 
 puts encrypt("abc")
 puts encrypt("zed")
 
-def decrypt (password)
-	index = 0
-	decode = "&"
-	reference = "abcdefghijklmnopqrstuvwxyz"
-	while index < password.length
-		pw = password[index]
-		ref = reference.index(pw)
-		ref -= 1
-		val = reference[ref]
-		#ref = ref.to_s
-		decode = decode + val
-		#decode = decode + ref
-		index += 1
-	end
-	decode.delete! "&"
-	print decode
-end
-
 puts decrypt("bcd")
 puts decrypt("afe")
+
+puts decrypt(encrypt("swordfish"))
+# This code works because Ruby evaluates the brackets first (encrypt ("swordfish"),
+# then applies the method outside the brackets to this result. 
+# For it to work you need to make sure that none of your commands return nil
+# values, because the second method cannot evaluate nil
+
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>delete
 # index = 0
