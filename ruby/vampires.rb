@@ -6,6 +6,8 @@ $valid_input = "invalid"
 
 while $count <= employees
   puts "Processing employee #{$count}/#{employees}"
+	puts "What is your name?"
+	name = gets.chomp
 	puts "What year were you born?"
 	year = gets.chomp
 	age = 2017 - year.to_i
@@ -13,8 +15,6 @@ while $count <= employees
 	bread = gets.chomp
 	puts "Would you like to enroll in the Company's health insurance? (y/n)"
 	health = gets.chomp
-	puts "What is your name?"
-	name = gets.chomp
   puts "Please name your allergies one at a time. Type 'done' when finished"
 	$allergies = gets.chomp
     until $allergies == "sunshine" || $allergies == "done"
