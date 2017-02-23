@@ -36,3 +36,48 @@ if home = "y"
 	home = true
 end
 client_data[:home] = home
+
+# print user data
+p client_data
+
+#give user opportunity to change their answer
+puts "Would you like to change any of your answers (please put yes or none)"
+changes = gets.chomp
+
+index = 1
+
+Until index == 0
+	if changes = "yes"
+		puts "What answer would you like to change?"
+		answer_change = gets.chomp
+			if answer_change = "name"
+				puts "What is your new answer?"
+				new_answer = gets.chomp
+			elsif answer_change = "age"
+				puts "What is your new answer?"
+				new_answer = gets.chomp
+				new_answer = new_answer.to_i
+			elsif answer_change = "children"
+				puts "What is your new answer?"
+				new_answer = gets.chomp
+				new_answer = new_answer.to_i
+			elsif answer_change = "decor"
+				puts "What is your new answer?"
+				new_answer = gets.chomp
+			elsif answer_change = "payment"
+				puts "What is your new answer?"
+					if new_answer = "y"
+						new_answer = true
+				new_answer = gets.chomp
+			elsif answer_change = "home"
+				puts "What is your new answer?"
+				new_answer = gets.chomp
+				if new_answer = "y"
+						new_answer = true
+
+
+
+
+
+
+
