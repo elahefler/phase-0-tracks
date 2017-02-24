@@ -9,12 +9,13 @@ reference = {
   consonants: "b"
 }
 
-
+vowels = "aeiou"
+consonants = "bcdfghjklmnpqrstvwxyz"
 # use case statement to convert consonants and vowels
-reference[:vowels] = "aeiou".split('')
-p reference[:vowels]
-reference[:consonants] = "bcdfghjklmnpqrstvwxyz".split('')
-p reference[:consonants]
+# reference[:vowels] = "aeiou".split('')
+# p reference[:vowels]
+# reference[:consonants] = "bcdfghjklmnpqrstvwxyz".split('')
+# p reference[:consonants]
 
 #Ask for spy's real name, store in variable
 puts "What is your full name"
@@ -39,3 +40,11 @@ spy_name[:first_name] = first_name
 last_name = reverse_name[1].split('')
 p last_name
 spy_name[:last_name] = last_name
+
+
+??????
+spy_name[:first_name].map! do |letter|
+  if letter == vowels[]
+    letter = vowels.next
+  end
+end
