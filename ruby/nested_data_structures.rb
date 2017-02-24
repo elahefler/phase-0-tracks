@@ -3,7 +3,7 @@ meal_ingredients = {
 		lettuce: "romaine",
 		dressing: "ranch",
 		protien: {
-			meat: "chicken"
+			meat: "chicken",
 			cheese: "parmesan"
 		},
 		vegetables: [
@@ -13,23 +13,28 @@ meal_ingredients = {
 		]
 	},
 	sandwich: {
-		bread: "rye"
-		protien: {
-			meat: "ham"
-			cheese: "cheddar"
-		},
-		vegitables: [
+		bread: "rye",
+		vegetables: [
 			"tomato",
 			"onion"
-		]
+		],
 		speads: [
 			"mayo",
 			"mustard",
-		]
+		],
+	protien: {
+		meat: "ham",
+		cheese: "cheddar"
+		},
 	},
 	drink: "milk",
 	dessert: [
 		"icecream",
 		"pie"]
-	}
 }
+
+meal_ingredients[:salad][:vegetables].push('onions')
+
+meal_ingredients[:drink]
+
+meal_ingredients[:dessert][1] = "apple crumble"
