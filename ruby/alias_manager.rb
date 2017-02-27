@@ -9,13 +9,6 @@ reference = {
   consonants: "b"
 }
 
-vowels = "aeiou"
-consonants = "bcdfghjklmnpqrstvwxyz"
-#! use case statement to convert consonants and vowels
-#! reference[:vowels] = "aeiou".split('')
-#! p reference[:vowels]
-#! reference[:consonants] = "bcdfghjklmnpqrstvwxyz".split('')
-#! p reference[:consonants]
 
 #Ask for spy's real name, store in variable
 puts "What is your full name"
@@ -32,22 +25,15 @@ p split_name
 reverse_name = split_name.reverse
 p reverse_name
 
-#! store letters of each name as arrays in spy_name hash
-#! alias_hash = {
-#! 	new_first_name: reverse_name[0].split(''),
-#! 	new_last_name: reverse_name[1].split('')
-#! }
-#! p alias_hash
-
 #store letters of each name as arrays in spy_name hash
-alias_hash = Hash.new {|hash, key| hash[key] = []
+alias_hash = Hash.new {|hash, key| hash[key] = []}
 
 alias_hash["New First Name"] = reverse_name[0].split('')
 alias_hash["New Last Name"] = reverse_name[1].split('')
 
 p alias_hash
 
-
+# Replace each value of "New First Name"
 alias_hash["New First Name"].map! { |letter|
    if (letter == "a")
        "e" 
@@ -104,6 +90,7 @@ alias_hash["New First Name"].map! { |letter|
    end
 }
 
+# Replace each value of "New Last Name"
 alias_hash["New Last Name"].map! { |letter|
    if (letter == "a")
        "e" 
@@ -160,3 +147,13 @@ alias_hash["New Last Name"].map! { |letter|
    end
 }
 p alias_hash
+
+
+
+
+
+	
+
+
+
+
