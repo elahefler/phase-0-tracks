@@ -1,8 +1,8 @@
 #set up hash structure
-spy_name = {
-  first_name: "x",
-  last_name: "y"
-}
+#! spy_name = {
+#!  first_name: "x",
+#!  last_name: "y"
+# }
 
 reference = {
   vowels: "a",
@@ -11,11 +11,11 @@ reference = {
 
 vowels = "aeiou"
 consonants = "bcdfghjklmnpqrstvwxyz"
-# use case statement to convert consonants and vowels
-# reference[:vowels] = "aeiou".split('')
-# p reference[:vowels]
-# reference[:consonants] = "bcdfghjklmnpqrstvwxyz".split('')
-# p reference[:consonants]
+#! use case statement to convert consonants and vowels
+#! reference[:vowels] = "aeiou".split('')
+#! p reference[:vowels]
+#! reference[:consonants] = "bcdfghjklmnpqrstvwxyz".split('')
+#! p reference[:consonants]
 
 #Ask for spy's real name, store in variable
 puts "What is your full name"
@@ -31,6 +31,15 @@ p split_name
 #Reverse order of first name and last name
 reverse_name = split_name.reverse
 p reverse_name
+
+#store letters of each name as arrays in spy_name hash
+alias_hash = {
+	"New First Name" => reverse_name[0].split('')
+	"New Last Name" => reverse_name[1].split('')
+}
+p alias_hash
+
+
 
 #store letters of each name as arrays in spy_name hash
 first_name = reverse_name[0].split('')
