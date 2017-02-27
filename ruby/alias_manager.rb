@@ -32,28 +32,131 @@ p split_name
 reverse_name = split_name.reverse
 p reverse_name
 
+#! store letters of each name as arrays in spy_name hash
+#! alias_hash = {
+#! 	new_first_name: reverse_name[0].split(''),
+#! 	new_last_name: reverse_name[1].split('')
+#! }
+#! p alias_hash
+
 #store letters of each name as arrays in spy_name hash
-alias_hash = {
-	"New First Name" => reverse_name[0].split('')
-	"New Last Name" => reverse_name[1].split('')
-}
+alias_hash = Hash.new {|hash, key| hash[key] = []
+
+alias_hash["New First Name"] = reverse_name[0].split('')
+alias_hash["New Last Name"] = reverse_name[1].split('')
+
 p alias_hash
 
 
+alias_hash["New First Name"].map! { |letter|
+   if (letter == "a")
+       "e" 
+   elsif (letter == "e")
+       "i" 
+    elsif (letter == "i")
+       "o"     
+    elsif (letter == "o")
+       "u"
+    elsif (letter == "u")
+       "a"
+    elsif (letter == "b")
+       "c" 
+    elsif (letter == "c")
+       "d"     
+    elsif (letter == "d")
+       "f"
+    elsif (letter == "f")
+       "g"
+     elsif (letter == "g")
+       "h" 
+    elsif (letter == "h")
+       "j"     
+    elsif (letter == "j")
+       "k"
+    elsif (letter == "k")
+       "l"
+     elsif (letter == "l")
+       "m" 
+    elsif (letter == "m")
+       "n"     
+    elsif (letter == "n")
+       "p"
+    elsif (letter == "p")
+       "q"
+    elsif (letter == "q")
+       "r" 
+    elsif (letter == "r")
+       "s"     
+    elsif (letter == "s")
+       "t"
+    elsif (letter == "t")
+       "v"
+    elsif (letter == "v")
+       "w" 
+    elsif (letter == "w")
+       "x"     
+    elsif (letter == "x")
+       "y"
+    elsif (letter == "y")
+       "z"
+    elsif (letter == "z")
+       "b"
+   end
+}
 
-#store letters of each name as arrays in spy_name hash
-first_name = reverse_name[0].split('')
-p first_name
-spy_name[:first_name] = first_name
-
-last_name = reverse_name[1].split('')
-p last_name
-spy_name[:last_name] = last_name
-
-
-??????
-spy_name[:first_name].map! do |letter|
-  if letter == vowels[]
-    letter = vowels.next
-  end
-end
+alias_hash["New Last Name"].map! { |letter|
+   if (letter == "a")
+       "e" 
+   elsif (letter == "e")
+       "i" 
+    elsif (letter == "i")
+       "o"     
+    elsif (letter == "o")
+       "u"
+    elsif (letter == "u")
+       "a"
+    elsif (letter == "b")
+       "c" 
+    elsif (letter == "c")
+       "d"     
+    elsif (letter == "d")
+       "f"
+    elsif (letter == "f")
+       "g"
+     elsif (letter == "g")
+       "h" 
+    elsif (letter == "h")
+       "j"     
+    elsif (letter == "j")
+       "k"
+    elsif (letter == "k")
+       "l"
+     elsif (letter == "l")
+       "m" 
+    elsif (letter == "m")
+       "n"     
+    elsif (letter == "n")
+       "p"
+    elsif (letter == "p")
+       "q"
+    elsif (letter == "q")
+       "r" 
+    elsif (letter == "r")
+       "s"     
+    elsif (letter == "s")
+       "t"
+    elsif (letter == "t")
+       "v"
+    elsif (letter == "v")
+       "w" 
+    elsif (letter == "w")
+       "x"     
+    elsif (letter == "x")
+       "y"
+    elsif (letter == "y")
+       "z"
+    elsif (letter == "z")
+       "b"
+   end
+}
+p alias_hash
