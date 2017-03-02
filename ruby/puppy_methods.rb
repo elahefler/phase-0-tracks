@@ -47,52 +47,27 @@ puppy.play_dead(5)
 
 class Make_dinner
 def initialize
-	puts "Initializing make_dinner instance..."
+    puts "Initializing Make_dinner instance..."
+end
+def main_dish (dish)
+    puts "You are making #{dish} for dinner"
+end
+def table_setting 
+    puts "Make sure you add forks!"
+end
 end
 
-	def guests(guests)
-		puts "You are making dinner for #{guests} people"
-	end
-
-	def table_setting
-		puts "Make sure to add forks"
-	end
+dinner_array = []
+50.times do 
+    dinner = Make_dinner.new
+    dinner_array << dinner
 end
-
-make_dinner = Make_dinner.new
-
-make_dinner.guests(10)
-make_dinner.table_setting
-
-
-
-dinner_array = [] 
-
-# 50.times do Make_dinner
-# 	guests.each
-# 		make_dinner.guests(10)
-# 	table_setting.each
-# 	make_dinner.table_setting
-# 	dinner_array << Make_dinner
-# end
-
-# p dinner_array
-
-50.times do |i| Make_dinner  
-		make_dinner.guests.each.capitalize(10)
-		make_dinner.table_setting.capitalize
-		end
-
-	dinner_array << Make_dinner
-
-p dinner_array
-
-
-# dinner_array.each do |i|
-# 	make_dinner.guests(n)
-# 	make_dinner.table_setting
-# end
-
-
-
+dinner_array.each do |i|
+    i.main_dish ("chicken")
+    i.table_setting
+    
+end
+dinner_array.each do |dinner|
+  p dinner
+end
 
